@@ -1,5 +1,6 @@
 import socket
 
+
 class Assignment2:
     def __init__(self, year):
         self.year = year
@@ -14,12 +15,11 @@ class Assignment2:
         decades = int(difference / 10)
 
         list = []
-        
+
         for y in range(1, decades+1):
             list.append(y*10)
 
         return list
-    
 
     def modifyYear(self, n):
         stringYearFull = str(self.year)
@@ -34,7 +34,7 @@ class Assignment2:
                 stringYearShort += str(modifiedYear)[i]
 
         return stringYearShort
-    
+
     @staticmethod
     def checkGoodString(string):
         goodString = False
@@ -48,7 +48,6 @@ class Assignment2:
 
         return goodString
 
-
     @staticmethod
     def connectTcp(host, port):
         connectedBool = False
@@ -56,7 +55,7 @@ class Assignment2:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         try:
-            client.connect((host,port))
+            client.connect((host, port))
             print("it works")
             connectedBool = True
 
@@ -65,7 +64,3 @@ class Assignment2:
         client.close()
 
         return connectedBool
-
-
-
-
