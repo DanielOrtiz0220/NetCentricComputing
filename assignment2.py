@@ -39,7 +39,7 @@ class Assignment2:
     def checkGoodString(string):
 
         testNum = 0
-        if (len(string) >= 9 and string[0].islower):
+        if (len(string) >= 9 and string[0].islower()):
             for i in range(len(string)):
                 if (string[i].isdigit()):
                     testNum += 1
